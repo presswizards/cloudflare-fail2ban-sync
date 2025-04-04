@@ -20,15 +20,15 @@ The result: effective blocking at the Cloudflare level for all bad IPs, whether 
 - First, save the file to your server, I just put mine in /root/.
 - Edit the script and add your Cloudflare Global API key and the email address associated with that key:
 
-...
+```
  # Cloudflare Global API Key and Email
 CF_API_KEY="bzsl3-not-real-replace-me-bc50zl3954io2e4"
 CF_EMAIL="support@yourdomain.com"
-...
+```
 
 - Add this script to your fail2ban iptables.conf file, so it triggers the ban or unban of the IP it's trying to block:
 
-$ sudo nano /etc/fail2ban/action.d/iptables.conf
+```$ sudo nano /etc/fail2ban/action.d/iptables.conf```
 
 Find the actionban line, and add this script right under it, like so:
 
@@ -45,11 +45,11 @@ Do the same for the actionunban line:
 ```            
 - Save the file, reload fail2ban:
 
- $ sudo service fail2ban reload
+ ```$ sudo service fail2ban reload```
 
 - Optionally, try banning an IP and view it in Cloudflare:
 
- $sudo fail2ban-client set ssh banip 192.168.0.1
+ ```$ sudo fail2ban-client set ssh banip 192.168.0.1```
 
 Wait 15-30 seconds and then in Cloudflare, go to the domain > Security > Security rules > click on IP Access Rules under Custom Rules section
 
@@ -59,11 +59,11 @@ Wait 15-30 seconds and then in Cloudflare, go to the domain > Security > Securit
 
 Edit the notes line to customize the rule description displayed in Cloudflare:
 
-   "notes": "Blocked by Fail2Ban (All Sites)"
+```   "notes": "Blocked by Fail2Ban (All Sites)"```
 
 You could change it to:
 
-   "notes": "Blocked by GreatHosting Fail2Ban on Server92 (All Sites)"
+```   "notes": "Blocked by GreatHosting Fail2Ban on Server92 (All Sites)"```
 
 That way you'll know which server it came from etc.
 
