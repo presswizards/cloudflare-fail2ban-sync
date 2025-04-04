@@ -32,14 +32,17 @@ $ sudo nano /etc/fail2ban/action.d/iptables.conf
 
 Find the actionban line, and add this script right under it, like so:
 
-actionban = <iptables> -I f2b-<name> 1 -s <ip> -j <blocktype>
-            /root/cloudflare-fail2ban-sync.sh ban <ip>
+```
+   actionban = <iptables> -I f2b-<name> 1 -s <ip> -j <blocktype>
+               /root/cloudflare-fail2ban-sync.sh ban <ip>
+```
 
 Do the same for the actionunban line:
 
-actionunban = <iptables> -D f2b-<name> -s <ip> -j <blocktype>
-            /root/cloudflare-fail2ban-sync.sh unban <ip>
-            
+```
+   actionunban = <iptables> -D f2b-<name> -s <ip> -j <blocktype>
+                 /root/cloudflare-fail2ban-sync.sh unban <ip>
+```            
 - Save the file, reload fail2ban:
 
  $ sudo service fail2ban reload
