@@ -17,7 +17,8 @@ The result: effective blocking at the Cloudflare level for all bad IPs, whether 
 
 ## Useage
 
-- First, save the file to your server, I just put mine in /root/.
+- First, download and save the cloudflare-fail2ban-sync.sh file to your server, I just put mine in /root/.
+- Be sure to chmod 700 the file so it's executable and no one else can read it.
 - Edit the script and add your Cloudflare Global API key and the email address associated with that key:
 
 ```
