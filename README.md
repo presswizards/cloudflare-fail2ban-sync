@@ -28,7 +28,7 @@ CF_EMAIL="support@yourdomain.com"
 
 - Add this script to your fail2ban iptables.conf file, so it triggers the ban or unban of the IP it's trying to block:
 
- # nano /etc/fail2ban/action.d/iptables.conf
+$ sudo nano /etc/fail2ban/action.d/iptables.conf
 
 Find the actionban line, and add this script right under it, like so:
 
@@ -42,11 +42,11 @@ actionunban = <iptables> -D f2b-<name> -s <ip> -j <blocktype>
             
 - Save the file, reload fail2ban:
 
- # service fail2ban reload
+ $ sudo service fail2ban reload
 
 - Optionally, try banning an IP and view it in Cloudflare:
 
- # fail2ban-client set ssh banip 192.168.0.1
+ $sudo fail2ban-client set ssh banip 192.168.0.1
 
 Wait 15-30 seconds and then in Cloudflare, go to the domain > Security > Security rules > click on IP Access Rules under Custom Rules section
 
