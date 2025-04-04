@@ -3,7 +3,7 @@ Use this lil script to sync fail2ban's ban and unban IPs to Cloudflare across al
 
 <p/>
 <a href="https://www.buymeacoffee.com/robwpdev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a><br>
-If this module saves you time, helps your clients, or helps you do better work, I’d appreciate it.
+If this script saves you time, helps your clients, or helps you do better work, I’d appreciate it.
 </p>
 
 ## The Cloudflare / fail2ban Problem
@@ -74,5 +74,5 @@ That way you'll know which server it came from etc.
 
 <p/>
 <a href="https://www.buymeacoffee.com/robwpdev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a><br>
-If this module saves you time, helps your clients, or helps you do better work, I’d appreciate it.
+If this script saves you time, helps your clients, or helps you do better work, I’d appreciate it.
 </p>
