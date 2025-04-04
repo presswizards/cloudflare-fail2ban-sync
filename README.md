@@ -56,6 +56,8 @@ Wait 15-30 seconds and then in Cloudflare, go to the domain > Security > Securit
 
 - Then unban it, and reload the IP Access Rules page after 15-30 seconds, and it should be deleted, like magic!
 
+### Note: Cloudfare's web UI seems to display the IP Access Rules inconsistently, showing only 1 rule, or 10, etc... reloading seems to help. It also seems to display only 100 maximum, even though via the API I've verified there are more than 100 rules, so the new ones are at the top. You can add additional rules using their Web UI, but editing is buggy, it displays a 404 Not Found, maybe because the rules are being cached or updated.
+
 ## Advanced
 
 Edit the notes line to customize the rule description displayed in Cloudflare:
